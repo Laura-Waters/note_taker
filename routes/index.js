@@ -5,6 +5,10 @@ let saveNoteBtn;
 let newNoteBtn;
 let noteList;
 
+const router = require('express').Router();
+const notesRouter = require('./notes');
+router.use('/notes', notesRouter);
+
 if (window.location.pathname === '/notes') {
   noteForm = document.querySelector('.note-form');
   noteTitle = document.querySelector('.note-title');
@@ -192,3 +196,4 @@ if (window.location.pathname === '/notes') {
 }
 
 getAndRenderNotes();
+module.exports = router;
