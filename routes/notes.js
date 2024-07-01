@@ -2,27 +2,15 @@ const notes = require('express').Router();
 const fs = require('fs');
 const path = require('path'); 
 const { v4: uuidv4 } = require('uuid');
-const { readAndAppend } = require('../helpers/fsUtils');
+const { readAndAppend, readFromFile } = require('../helpers/fsUtils');
 
 // GET route for retrieving all notes 
-notes.get('/', function(req, res) {
-    // read the contents of db.json file
-    fs.readFile(path.join(__dirname, 'db.json'), 'utf8', (err, data) => {
-        if (err) {
-            console.error(err);
-            res.status(500).json({ error: 'Error' });
-            return;
-        }
+notes.get('/', (req, res) =>
+    readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
+);
 
-        // Parse the JSON data
-        const notes = JSON.parse(data);
-
-        // Send the notes as a JSON response
-        res.json(notes);
-    });
-});
-
-notes.post('/', function(req, res) {
+// POST route for saving new notes 
+notes.post('/', (req, res) => {
     console.log(req.body); 
     
     const { title, text } = req.body;

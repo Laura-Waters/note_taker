@@ -7,5 +7,10 @@
         "title": "title",
         "text": "this is a note",
         "note_id": "a064d23a-e99b-40bc-b22e-ab8a5d044aa9"
+    },
+    {
+        "title": "title 2",
+        "text": "this is another note",
+        "note_id": "afeead4a-8310-4393-b59c-c2000051da6b"
     }
 ]
