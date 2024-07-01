@@ -6,19 +6,25 @@ const api = require('./routes/index.js');
 
 // Middleware for parsing JSON data
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use('/api', api);
 app.use(express.static('public'));
 
 // GET Route for homepage
 app.get('/', (req, res) =>
     res.sendFile(path.join(__dirname, '/public/pages/index.html'))
-  );
+);
 
 // GET Route for notes page 
 app.get('/notes', (req, res) =>
     res.sendFile(path.join(__dirname, '/public/pages/notes.html'))
-  );
+);
 
-  app.listen(PORT, () =>
-    console.log(`App listening at http://localhost:${PORT}`)
-  );
+// Wildcard route to direct users to homepage
+app.get('*', (req, res) =>
+  res.sendFile(path.join(__dirname, '/public/pages/index.html'))
+);
+
+app.listen(PORT, () =>
+  console.log(`App listening at http://localhost:${PORT}`)
+);
