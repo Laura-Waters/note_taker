@@ -4,7 +4,7 @@ const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 
 // GET route for retrieving all notes 
-notes.get('/api/notes', function(req, res) {
+notes.get('/', function(req, res) {
     // read the contents of db.json file
     fs.readFile(path.join(__dirname, 'db.json'), 'utf8', (err, data) => {
         if (err) {
@@ -21,7 +21,7 @@ notes.get('/api/notes', function(req, res) {
     });
 });
 
-notes.post('/api/notes', function(req, res) {
+notes.post('/', function(req, res) {
     console.log(req.body); 
     
     const { title, text } = req.body;
