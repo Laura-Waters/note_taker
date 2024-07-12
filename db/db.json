@@ -12,5 +12,15 @@
         "title": "title 2",
         "text": "this is another note",
         "note_id": "afeead4a-8310-4393-b59c-c2000051da6b"
+    },
+    {
+        "title": "First Note",
+        "text": "Module 11 Challenge",
+        "note_id": "1f7af3e2-dc49-42b6-9dfc-c958ae23e067"
+    },
+    {
+        "title": "This is another note",
+        "text": "Note body",
+        "note_id": "d9472bc1-6370-47df-b250-8aacb66d8027"
     }
 ]
