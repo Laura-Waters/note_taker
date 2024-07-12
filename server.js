@@ -3,7 +3,7 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3001; 
 const routes = require('./routes');
-const api = require('./routes/index.js');
+const api = require('./routes');
 
 // Middleware for parsing JSON data
 app.use(express.json());
