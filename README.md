@@ -22,10 +22,11 @@ N/A
 Please refer to the LICENSE in the repo.
 
 ## Deployed Application
-https://laura-waters.github.io/note_taker/
+https://note-taker-emtn.onrender.com/
 
 <img width="1263" alt="landing_page" src="https://github.com/Laura-Waters/note_taker/assets/168473293/6b06caf6-d616-48b8-8a8d-b2d105ae8bcb">
-<img width="1261" alt="note_page" src="https://github.com/Laura-Waters/note_taker/assets/168473293/2f2b12f3-38ee-4e8d-8d99-f6c01473d411">
+<img width="1479" alt="note_page" src="https://github.com/user-attachments/assets/5612ae3d-72c8-4edb-9de9-20b7229c054b">
+
 
 
 
